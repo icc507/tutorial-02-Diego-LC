@@ -16,5 +16,5 @@ def toIntList(t):
 
 t = input().split()
 t.reverse()
-t = toIntList(t)
+t = tuple(toIntList(t))
 print(t)
