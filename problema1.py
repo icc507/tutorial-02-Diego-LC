@@ -10,6 +10,16 @@
 #La salida debe ser
 #         ('mundo', 44, 20, 90, 'hola', 'mundo', 44)
 
-t1 = tuple(input().split())
-t2 = tuple(input().split())
+def toIntList(t):
+    for i in range(len(t)):
+        if t[i].isnumeric():
+            t[i] = int(t[i])
+    return t
+    
+
+t1 = input().split()
+t1 = tuple(toIntList(t1))
+
+t2 = input().split()
+t2 = tuple(toIntList(t2))
 print(t2 + t1 + t2)
