@@ -7,6 +7,14 @@
 #         20 90 hola jiji 77
 #La salida debe ser
 #         (77, 'jiji', 'hola', 90, 20)
+
+def toIntList(t):
+    for i in range(len(t)):
+        if t[i].isnumeric():
+            t[i] = int(t[i])
+    return t
+
 t = input().split()
 t.reverse()
+t = toIntList(t)
 print(t)
